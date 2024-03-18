@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <meta name="robots" content="noindex,nofollow,noarchive" />
+
+    <script>
+      MathJax = {
+        chtml: {
+          displayAlign: "left",
+          displayIndent: "1em",
+        },
+      };
+    </script>
+
+    
+
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>3Dプリンターファームエントランス</title>
+  </head>
+
+  <body>
+    <div class="openbtn"><span></span><span></span><span></span></div>
+    <nav id="g-nav">
+      <div id="g-nav-list">
+        <!-- ---------------------------------------- -->
+         <ul>
+<li><a href="#dプリンターファームとは"
+id="toc-dプリンターファームとは"><span
+class="toc-section-number">1</span> 3Dプリンターファームとは</a></li>
+<li><a href="#dプリンターファームの利用手順"
+id="toc-dプリンターファームの利用手順"><span
+class="toc-section-number">2</span> 3Dプリンターファームの利用手順</a>
+<ul>
+<li><a href="#予約する" id="toc-予約する"><span
+class="toc-section-number">2.1</span> 予約する</a></li>
+</ul></li>
+</ul> 
+        <!-- ---------------------------------------- -->
+      </div>
+    </nav>
+
+    <header class="markdown-body">
+      <p>3Dプリンターファームエントランス</p>
+      <p></p>
+    </header>
+
+    <main class="markdown-body">
+      <!-- ---------------------------------------- -->
+      <div style="text-align: right;">
+      <p>Update 2024.3.7(By TakehitoNAKATSU)</p>
+      </div>
+      <h1 data-number="1" id="dプリンターファームとは"><span
+      class="header-section-number">1</span>
+      3Dプリンターファームとは</h1>
+      <p>授業やクラブ利用だけでなく、個人での利用も可能な3Dプリンターが集約されている仕組みのことです。利用者が費用を負担することになっていますが、そのおかげで個人的な製作にも利用が可能です。
+      以下に基本情報があります。 - 場所：専門棟1-1F　付加製造実験室 -
+      利用時間：8:00-17:00（中津在室時）※事前相談により夕方からの利用も調整します
+      -
+      中津不在時は機械系の先生か3Dプリンターを扱う授業担当者に部屋を開けてもらうこともできます（要事前相談）
+      - 材料の持ち込み不可（費用チャージで材料の一括購入） -
+      利用できる方式はFDM型、IDEX型、液晶方式SLA型、PBF型があります。</p>
+      <h1 data-number="2" id="dプリンターファームの利用手順"><span
+      class="header-section-number">2</span>
+      3Dプリンターファームの利用手順</h1>
+      <p>3Dプリンターファームの利用手順です。各手順内のリンク資料やフォームを利用してください。</p>
+      <h2 data-number="2.1" id="予約する"><span
+      class="header-section-number">2.1</span> 予約する</h2>
+      <p>3Dプリンターファームの利用は予約必須です。予約なしの場合、空きがなければ利用できませんので注意してください。飛び込み利用でも、予約入力をしてもらいます。予約システムには重複チェック機能はありませんので、もし予約が重なっていることが発覚した場合は
+      <strong>先予約を優先</strong> します。</p>
+      <!-- ---------------------------------------- -->
+    </main>
+
+    <footer class="markdown-body">
+      <p><a href="https://nakatsutakehito.github.io/Git-Training-01/">講義資料のIndexに移動</a></p>
+    </footer>
+
+    <script>
+      window.onload = function () {
+        // ナビゲーション関連
+        let openBtn = document.getElementsByClassName("openbtn")[0];
+        let navPnl = document.getElementById("g-nav");
+        openBtn.onclick = () => {
+          openBtn.classList.toggle("active");
+          navPnl.classList.toggle("panelactive");
+        };
+
+        let items = navPnl.getElementsByTagName("a");
+        Array.from(items).forEach((item) => {
+          item.onclick = () => {
+            openBtn.classList.toggle("active");
+            navPnl.classList.toggle("panelactive");
+          };
+        });
+
+        // マスク処理
+        let maskedSpans = document.getElementsByClassName("masked");
+        Array.from(maskedSpans).forEach((span) => {
+          span.onclick = () => {
+            span.classList.toggle("open");
+          };
+        });
+
+        // data-startfrom 属性の行番号カウンタのリセット
+        document.querySelectorAll("div.sourceCode").forEach(function (div) {
+          var startFrom = div.getAttribute("data-startfrom");
+          if (startFrom != null) {
+            div.style.counterReset = "pg-line " + (startFrom - 1);
+          }
+        });
+
+        // 画像にリンクを付与
+        // let images = document.querySelectorAll("figure img");
+        // Array.from(images).forEach((img) => {
+        //   img.onclick = () => {
+        //     location.href = img.getAttribute("src");
+        //   };
+        // });
+      };
+    </script>
+  </body>
+</html>
